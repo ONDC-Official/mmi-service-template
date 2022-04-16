@@ -41,7 +41,7 @@ def get_place_info_for_eloc(eloc):
 
 def get_place_info_for_latlong(lat, long):
     params = {"lat": lat, "lng": long}
-    response = requests.get(f"{MMI_APIS_BASE_PATH}/{get_config_by_name('mmi_advance_api_api_key')}/rev_geocode",
+    response = requests.get(f"{MMI_APIS_BASE_PATH}/{get_config_by_name('MMI_ADVANCE_API_KEY')}/rev_geocode",
                             params=params)
     response = response.json()
     return response

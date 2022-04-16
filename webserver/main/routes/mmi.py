@@ -1,8 +1,7 @@
 from flask_restplus import Namespace, Resource, reqparse
 
-from main.service.mmi import fetch_tokens, get_auto_complete_by_query, get_place_info_for_eloc
+from main.service.mmi import fetch_tokens, get_auto_complete_by_query, get_place_info_for_eloc, get_place_info_for_latlong
 
-from webserver.main.service.mmi import get_place_info_for_latlong
 
 mmi_namespace = Namespace('mmi', description='mmi utils')
 

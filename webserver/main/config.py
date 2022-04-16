@@ -58,6 +58,7 @@ class ProductionConfig(Config):
     JWT_COOKIE_CSRF_PROTECT = False
     MMI_CLIENT_ID = os.getenv("MMI_CLIENT_ID")
     MMI_CLIENT_SECRET = os.getenv("MMI_CLIENT_SECRET")
+    MMI_ADVANCE_API_KEY = os.getenv("MMI_ADVANCE_API_KEY")
 
 
 class LightConfig(Config):
