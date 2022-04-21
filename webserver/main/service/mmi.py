@@ -29,7 +29,7 @@ def get_auto_complete_by_query(query):
     headers = {"Authorization": f"Bearer {fetch_tokens()}"}
     response = requests.get(MMI_AUTO_COMPLETE_ENDPOINT, params=params, headers=headers)
     json_response = response.json()
-    return json_response["suggestedLocations"]
+    return json_response.get("suggestedLocations",{})
 
 
 def get_place_info_for_eloc(eloc):
