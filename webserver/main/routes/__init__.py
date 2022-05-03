@@ -2,6 +2,7 @@ import os
 
 from flask_restplus import Api as BaseAPI
 
+from main.routes.knowlarity import knowlarity_namespace
 from main.routes.mmi import mmi_namespace
 
 
@@ -27,3 +28,4 @@ api = Api(
 # api.render_root()
 
 api.add_namespace(mmi_namespace, path='/v1/api')
+api.add_namespace(knowlarity_namespace, path='/v1/api')

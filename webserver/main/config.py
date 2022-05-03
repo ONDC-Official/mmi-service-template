@@ -59,6 +59,10 @@ class ProductionConfig(Config):
     MMI_CLIENT_ID = os.getenv("MMI_CLIENT_ID")
     MMI_CLIENT_SECRET = os.getenv("MMI_CLIENT_SECRET")
     MMI_ADVANCE_API_KEY = os.getenv("MMI_ADVANCE_API_KEY")
+    knowlarity_number = os.getenv("KNOWLARITY_NUMBER")
+    knowlarity_agent_number = os.getenv("KNOWLARITY_AGENT_NUMBER")
+    knowlarity_api_key = os.getenv("KNOWLARITY_API_KEY")
+    knowlarity_authorization_header_key = os.getenv("KNOWLARITY_AUTHORIZATION_HEADER_KEY")
 
 
 class LightConfig(Config):
