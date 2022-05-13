@@ -9,7 +9,8 @@ class FetchTokens(Resource):
 
     def create_parser_with_args(self):
         parser = reqparse.RequestParser()
-        parser.add_argument("phone_number",required=True)
+        parser.add_argument("customer_phone_number",required=True)
+        parser.add_argument("seller_phone_number",required=True)
         return parser.parse_args()
 
     def post(self):
