@@ -1,6 +1,7 @@
 import os
 
 import requests
+from flask_restplus import abort
 
 from main.config import get_config_by_name
 
@@ -13,6 +14,8 @@ def call_patron_with_given_number(customer_phone_number,seller_phone_number):
     headers = {"x-api-key": get_config_by_name("knowlarity_api_key"),
                "Authorization": get_config_by_name("knowlarity_authorization_header_key")}
     response = requests.post(KNOWLARITY_URl,headers=headers,json=params)
+    if response.status_code != 200:
+        abort(500, f"failed while calling knowlarity with message {response.text}")
     return response.json()
 
 
